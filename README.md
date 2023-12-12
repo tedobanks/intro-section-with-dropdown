@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://your-solution-url.com)
-- Live Site URL: [Live site URL](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-built-with-html-css-and-javascript-xZMD6FJuiu)
+- Live Site URL: [Live site URL](https://tedobanks.github.io/intro-section-with-dropdown/)
 
 ## My process
 
@@ -44,6 +44,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+- JavaScript
 
 ## Author
 
