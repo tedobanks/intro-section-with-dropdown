@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Epilogue", sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    background-color: hsl(0, 0%, 98%);
+    padding: 20px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: none;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-direction: row;
+}
+
+.logo {
+    width: min(5.25rem, 5vw);
+    aspect-ratio: 84 / 27;
+    margin-right: min(40px, 5vw);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.nav-list li {
+    list-style: none;
+    margin-inline: 10px;
+    position: relative;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+    font-size: min(0.875rem, 0.875vw);
+}
+
+.nav-list li a:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+.pair-icon img {
+    margin-left: 4px;
+}
+
+.dropdown {
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+    right: 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 8px 8px 15px hsl(0, 0%, 41%, 0.1),
+        -4px -4px 4px hsl(0, 0%, 41%, 0.05);
+    z-index: 999;
+    background-color: hsl(0, 0%, 98%);
+    width: max-content;
+}
+
+.first-dropdown:hover .dropdown,
+.second-dropdown:hover .dropdown {
+    display: flex;
+}
+
+.second-dropdown .dropdown {
+    right: auto;
+    left: 0;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dropdown-item:last-child {
+    margin-bottom: 0px;
+}
+
+.icon-container {
+    width: 12px;
+    margin-right: 10px;
+}
+
+.icon-container img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.item-1 {
+    background-image: url(./images/icon-todo.svg);
+}
+
+.item-2 {
+    background-image: url(./images/icon-calendar.svg);
+}
+
+.item-3 {
+    background-image: url(./images/icon-reminders.svg);
+}
+
+.item-4 {
+    background-image: url(./images/icon-planning.svg);
+}
+
+.auth-container button {
+    width: 5rem;
+    height: 1.875rem;
+    background-color: transparent;
+    color: hsl(0, 0%, 41%);
+    font-size: 0.625rem;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-container button:hover {
+    color: hsl(0, 0%, 8%);
+}
+
+.register-btn {
+    border: 1px solid hsl(0, 0%, 41%) !important;
+    border-radius: 8px;
+}
+
+.register-btn:hover {
+    border: 1.5px solid hsl(0, 0%, 8%) !important;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 0;
+}
+
+.text-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    padding-left: 6rem;
+}
+
+.leading {
+    line-height: 1;
+    font-size: 3.125rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.description {
+    color: hsl(0, 0%, 41%);
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.text-container button {
+    width: 7.5rem;
+    height: 2.5rem;
+    border-radius: 8px;
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    border: none;
+    font-size: 0.75rem;
+    margin-bottom: 80px;
+    cursor: pointer;
+}
+
+.text-container button:hover {
+    background-color: transparent;
+    color: hsl(0, 0%, 8%);
+    border: 1px solid hsl(0, 0%, 8%);
+}
+
+.hero-container {
+    width: 50%;
+    height: 100%;
+    background-image: url(./images/image-hero-desktop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.clients {
+    display: flex;
+    align-items: center;
+}
+
+.client {
+    width: 70px;
+    object-fit: contain;
+    margin-inline: 20px;
+}
+
+.client:first-child {
+    margin-left: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding-bottom: 20px;
+    }
+
+    header {
+        width: 100%;
+    }
+
+    .logo {
+        width: 25%;
+        margin-right: 0px;
+    }
+
+    .menu {
+        width: 40px;
+        aspect-ratio: 1;
+        display: block;
+        background-image: url(./images/icon-menu.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        z-index: 9000;
+        transition: all 0.3s ease-in;
+    }
+
+    .menu[data-open="true"] {
+        width: 30px;
+        background-image: url(./images/icon-close-menu.svg);
+    }
+
+    .nav-container {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 60%;
+        height: 100%;
+        z-index: 1000;
+        padding: 30px;
+        padding-top: 100px;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        background-color: hsl(36, 100%, 99%);
+        transform: translateX(100%);
+        transition: all 0.3s ease-out;
+    }
+
+    .nav-container[data-open="true"] {
+        transform: translateX(0%);
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .nav-list li {
+        margin-bottom: 30px;
+    }
+
+    .nav-list li a {
+        font-size: 18px;
+    }
+
+    .first-dropdown:hover .dropdown,
+    .second-dropdown:hover .dropdown {
+        display: none;
+    }
+
+    .first-dropdown[data-open="true"] .dropdown {
+        display: flex;
+    }
+
+    .second-dropdown[data-open="true"] .dropdown {
+        display: flex;
+    }
+
+    .dropdown {
+        position: relative;
+        padding: 15px;
+        border-radius: 0px;
+        box-shadow: none;
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .dropdown-item {
+        margin-bottom: 20px;
+    }
+
+    .icon-container {
+        width: 20px;
+    }
+
+    .dropdown-item a {
+        font-size: 18px;
+    }
+
+    .auth-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .auth-container button {
+        width: 100%;
+        height: 2.8125rem;
+        font-size: 18px;
+    }
+
+    .register-btn {
+        border: 1.5px solid hsl(0, 0%, 41%) !important;
+        border-radius: 14px;
+    }
+
+    main {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .hero-container {
+        width: 100%;
+        background-image: url(./images/image-hero-mobile.png);
+    }
+
+    .text-container {
+        width: 100%;
+        padding: 0px;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .text-container button {
+        margin-bottom: 40px;
+    }
+
+    .leading {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .clients {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .client {
+        width: 20%;
+        margin: 0;
+    }
+}

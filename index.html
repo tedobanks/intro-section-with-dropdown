@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Intro section with dropdown navigation</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <header>
+            <img src="./images/logo.svg" class="logo" />
+            <div
+                aria-controls="navigation"
+                class="menu"
+                data-open="false"
+            ></div>
+            <div class="nav-container" data-open="false`">
+                <ul class="nav-list">
+                    <li class="first-dropdown" data-open="false">
+                        <a href="#">
+                            Features
+                            <span class="pair-icon"
+                                ><img src="./images/icon-arrow-down.svg" alt=""
+                            /></span>
+                        </a>
+                        <div class="dropdown dropdown-1">
+                            <div class="dropdown-item">
+                                <div class="icon-container">
+                                    <img
+                                        src="./images/icon-todo.svg"
+                                        alt="todo-list"
+                                    />
+                                </div>
+                                <a href="#">Todo List</a>
+                            </div>
+                            <div class="dropdown-item">
+                                <div class="icon-container">
+                                    <img
+                                        src="./images/icon-calendar.svg"
+                                        alt="calender"
+                                    />
+                                </div>
+                                <a href="#">Calender</a>
+                            </div>
+                            <div class="dropdown-item">
+                                <div class="icon-container">
+                                    <img
+                                        src="./images/icon-reminders.svg"
+                                        alt="reminder"
+                                    />
+                                </div>
+                                <a href="#">Reminders</a>
+                            </div>
+                            <div class="dropdown-item">
+                                <div class="icon-container">
+                                    <img
+                                        src="./images/icon-planning.svg"
+                                        alt="planning"
+                                    />
+                                </div>
+                                <a href="">Planning</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="second-dropdown" data-open="false">
+                        <a href="#">
+                            Company
+                            <span class="pair-icon"
+                                ><img src="./images/icon-arrow-down.svg" alt=""
+                            /></span>
+                        </a>
+                        <div class="dropdown dropdown-2">
+                            <div class="dropdown-item">
+                                <a href="#">History</a>
+                            </div>
+                            <div class="dropdown-item">
+                                <a href="#">Our Team</a>
+                            </div>
+                            <div class="dropdown-item">
+                                <a href="#">Blog</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+                <div class="auth-container">
+                    <button>Login</button>
+                    <button class="register-btn">Register</button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="text-container">
+                <h1 class="leading">Make <br />remote work</h1>
+
+                <p class="description">
+                    Get your team in sync, no matter your location.<br />
+                    Streamline processes, create team rituals, and<br />
+                    watch productivity soar.
+                </p>
+
+                <button>Learn more</button>
+
+                <div class="clients">
+                    <img
+                        class="client"
+                        src="./images/client-databiz.svg"
+                        alt=""
+                    />
+                    <img
+                        class="client"
+                        src="./images/client-audiophile.svg"
+                        alt=""
+                    />
+                    <img class="client" src="./images/client-meet.svg" alt="" />
+                    <img
+                        class="client"
+                        src="./images/client-maker.svg"
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div class="hero-container"></div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
